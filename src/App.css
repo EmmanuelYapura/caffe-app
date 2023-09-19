@@ -1,38 +1,382 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-image: url('./imagenes/bg_coffee_upscaled.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* padding-top: 2em; */ /* Prestar atencion a esto */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.home{
+  font-family: Roboto;
+  text-align: start;
+  width: 550px;
+  border: 5px dotted #BF7D56;
+  padding: 3em 1em 2.5em;
+  margin-left: 6em;
+  margin-top: 5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titulo-home{
+  color: #C38154;
+  font-size: 2.4em;
+  padding-left: 0.5em;
+  padding-bottom: 0.3em;
 }
+
+.texto-home{
+  padding-bottom: 0.3em;
+  padding-left: 1.5em;
+  font-size: 1.3em;
+}
+
+.header{
+  border-bottom: 1px so white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1em 7em;
+  background-color: #BF7D56;
+}
+
+.titulo-header{
+  padding-bottom: 0.1em;
+}
+
+.links-header{
+
+}
+
+.link-header-home{
+  color: white;
+  text-decoration: none;
+}
+
+.link-header{
+  font-size: 1.3em;
+  padding: 0 0.6em;
+  color: white;
+  text-decoration: none;
+}
+
+.link-header:hover{
+  color: black;
+}
+
+.usuario{
+  padding-top: 0.4em;
+}
+
+.nombreUsuario{
+  color: white;
+  font-size: 1.2em;
+}
+
+.btn-logout{
+  font-size: 0.9em;
+  padding: 0.5em 0.6em;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  border-radius: 10px; 
+  margin-left: 1.5em;
+}
+
+.btn-logout:hover{
+  cursor: pointer;
+  color: #f7a778;
+  background-color: white;
+}
+
+
+.contenedorFormulario {
+  font-family: Roboto;
+  padding: 2em 2em 1em;
+  border: 2px solid #F2CAB3;
+  border-radius: 5px;
+}
+
+.formWidth{
+  width: 400px;
+}
+
+.marginForm{
+  margin-top: 3em;
+  margin-left: 10em;
+}
+
+
+.titulo {
+  letter-spacing: 3px;
+  font-size: 2.7em;
+  padding: 0.1em 0;
+  color: #C38154;
+}
+
+.parrafo {
+  font-size: 1.2em;
+  padding-bottom: 1.5em;
+  color: #F9FBE7;
+}
+
+span {
+  color: #C38154;
+}
+
+a{
+  color: #C38154;
+}
+
+a:hover{
+  color: white;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.texto-label {
+  letter-spacing: 1px;
+  font-size: 1.03em;
+  text-align: start;
+  padding-left: 0.1em;
+}
+
+input {
+  border: none;
+  padding: 4px;
+  color: #C38154;
+  background-color: transparent;
+  border-bottom: 1px solid #C38154;
+  margin-bottom: 1em;
+}
+
+input:focus-visible{
+  outline: none;
+}
+
+.btn-ingreso {
+  padding: 5px;
+  margin: 0.5em 0;
+  background-color: #BF7D56;
+  border-color: transparent;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.btn-ingreso:hover{
+  cursor: pointer;
+}
+
+.errorLogin, .errorRegistro{
+  display: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-top: 0.1em;
+  border-radius: 5px;
+  color: red;
+  background-color: white;
+}
+
+.texto-registro{
+  margin-top: 1em;
+}
+
+/* dashboard css */
+
+.container-dashboard{
+  border-radius: 5px;
+  background-color: #fffffff4;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.header-dashboard{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Roboto;
+  background-color: #485154;
+  font-size: 1.2em;
+  padding: 0.3em 0;
+  background-color: #485154;
+}
+
+.logo-dashboard{
+  color: #f7a778;
+}
+
+.titulo-dashboard{
+  font-size: 1.2em;
+}
+
+.texto-dashboard{
+  color: #BF7D56;
+  font-size: 1.1em;
+  padding: 0.5em 0;
+}
+
+.items-compra{
+  display: flex;
+}
+
+.items-dashboard{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.1em 0;
+  width: 50%;
+  height: 610px;
+  overflow-y: scroll;
+}
+
+.pedido-dashboard{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5em;
+  justify-content: space-between;
+}
+
+.titulo-pedido{
+  padding-top: 0.3em;
+  font-family: Roboto;
+  font-size: 1.9em;
+  letter-spacing: 1.5px;
+  color: #485154;
+}
+
+.pedidos{
+  color: #485154;
+}
+
+.pedido{
+  width: 360px;
+  border: 1px solid gray;
+  display: flex;
+  margin: 0.3em 0;
+}
+
+.pedido-cafe{
+  text-align: start;
+  padding: 0.2em 0 0.3em;
+}
+
+.pedido-padding{
+  padding-left: 1em;
+}
+
+.btn-borrar{
+  align-self: flex-start;
+  margin-left: 5em;
+  margin-top: 0.2em;
+  padding: 0.2em;
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-borrar:hover{
+  cursor: pointer;
+}
+
+.container-precio{
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+.precio-pedido{
+  color: #485154;
+  font-size: 1.3em;
+  padding-bottom: 0.2em;
+  padding-right: 1em;
+}
+
+.btn-comprar{
+  color: #a5440c;
+  background-color: transparent;
+  border: 2px solid #BF7D56;
+  border-radius: 10px;
+  font-size: 0.9em;
+  padding: 0.4em 0.6em;
+}
+
+.btn-comprar:hover{
+  background-color: #485154;
+  color: white;
+}
+
+/* ItemCafe */
+
+.container-item{
+  border: 1px solid #C38154;
+  padding: 1em;
+  margin: 1em;
+}
+
+.img-item{
+  border-radius: 3px;
+}
+
+.info-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.info-titulo{
+  padding-left: 0.5em;
+  color: rgba(27, 25, 25, 0.819);
+}
+
+.info-precio {
+  padding-right: 0.5em;
+  color: rgba(27, 25, 25, 0.819);
+}
+
+.container-btns{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2em;
+}
+
+.info-btn{
+  background-color: transparent;
+  border-radius: 5px;
+  border-color:  #C38154;
+  color:  #C38154;
+  font-weight: bold;
+  margin-top: 0.5em;
+  padding: 0.3em 0.5em;
+}
+
+.info-btn:hover{
+  background-color: #C38154;
+  color: white;
+  cursor: pointer;
+}
+
+.padding-cant{
+  padding: 0.2em 0.4em;
+}
+
+/* 
+  #F2CAB3
+  #C38154
+  #BF7D56
+*/
+
